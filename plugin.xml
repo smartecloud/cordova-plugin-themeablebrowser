@@ -18,10 +18,9 @@
   under the License.
 -->
 
-<plugin
-      xmlns="http://apache.org/cordova/ns/plugins/1.0"
-      id="cordova-plugin-themeablebrowser"
-      version="0.2.17">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="cordova-plugin-themeablebrowser"
+      version="0.2.12">
 
     <name>ThemeableBrowser</name>
     <description>Cordova ThemeableBrowser Plugin</description>
@@ -49,6 +48,22 @@
         <source-file src="src/android/ThemeableBrowserDialog.java" target-dir="src/com/initialxy/cordova/themeablebrowser" />
         <source-file src="src/android/InAppChromeClient.java" target-dir="src/com/initialxy/cordova/themeablebrowser" />
         <source-file src="src/android/ThemeableBrowserUnmarshaller.java" target-dir="src/com/initialxy/cordova/themeablebrowser" />
+
+
+        <source-file src="src/android/res/drawable-xhdpi/back_pressed.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/back.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/close_pressed.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/close.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/forward_pressed.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/forward.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/menu_pressed.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/menu.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/share_pressed.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/share.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/complete_pressed.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/complete.png" target-dir="res/drawable-xhdpi"/>
+
+
     </platform>
 
     <!-- ios -->
@@ -66,5 +81,21 @@
         <source-file src="src/ios/CDVThemeableBrowser.m" />
 
         <framework src="CoreGraphics.framework" />
+
+        <resource-file src="src/ios/Resources/back_pressed@2x.png" target-dir="src/ios"/>
+        <resource-file src="src/ios/Resources/back@2x.png" target-dir="src/ios"/>
+        <resource-file src="src/ios/Resources/close_pressed@2x.png" target-dir="src/ios"/>
+        <resource-file src="src/ios/Resources/close@2x.png" target-dir="src/ios"/>
+        <resource-file src="src/ios/Resources/forward_pressed@2x.png" target-dir="src/ios"/>
+        <resource-file src="src/ios/Resources/forward@2x.png" target-dir="src/ios"/>
+        <resource-file src="src/ios/Resources/menu_pressed@2x.png" target-dir="src/ios"/>
+        <resource-file src="src/ios/Resources/menu@2x.png" target-dir="src/ios"/>
+        <resource-file src="src/ios/Resources/share_pressed@2x.png" target-dir="src/ios"/>
+        <resource-file src="src/ios/Resources/share@2x.png" target-dir="src/ios"/>
+        <resource-file src="src/ios/Resources/success.png" target-dir="src/ios"/>
+
+        <resource-file src="src/ios/Resources/complete_pressed@2x.png" target-dir="src/ios"/>
+        <resource-file src="src/ios/Resources/complete@2x.png" target-dir="src/ios"/>
+
     </platform>
 </plugin>

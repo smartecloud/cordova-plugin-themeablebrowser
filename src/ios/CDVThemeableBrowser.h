@@ -48,6 +48,7 @@
 
 @property (nonatomic) NSDictionary* statusbar;
 @property (nonatomic) NSDictionary* toolbar;
+
 @property (nonatomic) NSDictionary* title;
 @property (nonatomic) NSDictionary* backButton;
 @property (nonatomic) NSDictionary* forwardButton;
@@ -57,6 +58,10 @@
 @property (nonatomic) BOOL backButtonCanClose;
 @property (nonatomic) BOOL disableAnimation;
 @property (nonatomic) BOOL fullscreen;
+
+//
+@property (nonatomic) NSMutableDictionary *bottomToolbar;
+@property (nonatomic) NSMutableDictionary *urlType;
 
 @end
 
@@ -69,6 +74,7 @@
 @property (nonatomic, retain) CDVThemeableBrowserViewController* themeableBrowserViewController;
 @property (nonatomic, copy) NSString* callbackId;
 @property (nonatomic, copy) NSRegularExpression *callbackIdPattern;
+
 
 - (CDVThemeableBrowserOptions*)parseOptions:(NSString*)options;
 - (void)open:(CDVInvokedUrlCommand*)command;
@@ -105,6 +111,7 @@
 @property (nonatomic, strong) IBOutlet UIButton* menuButton;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView* spinner;
 @property (nonatomic, strong) IBOutlet UIView* toolbar;
+@property (nonatomic, strong) IBOutlet UIView *bottomToolbar;
 
 @property (nonatomic, strong) NSArray* leftButtons;
 @property (nonatomic, strong) NSArray* rightButtons;
@@ -114,12 +121,18 @@
 @property (nonatomic) NSURL* currentURL;
 @property (nonatomic) CGFloat titleOffset;
 
+@property (nonatomic, strong) NSString *typeName;
+@property (assign)  NSInteger bottomToolbarFlag;//
+
 - (void)close;
 - (void)reload;
 - (void)navigateTo:(NSURL*)url;
 - (void)showLocationBar:(BOOL)show;
 - (void)showToolBar:(BOOL)show : (NSString*) toolbarPosition;
 - (void)setCloseButtonTitle:(NSString*)title;
+
+
+- (void)_initBottomToolbar:(NSInteger) flag;
 
 - (id)initWithUserAgent:(NSString*)userAgent prevUserAgent:(NSString*)prevUserAgent browserOptions: (CDVThemeableBrowserOptions*) browserOptions navigationDelete:(CDVThemeableBrowser*) navigationDelegate statusBarStyle:(UIStatusBarStyle) statusBarStyle;
 
